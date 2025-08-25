@@ -1,0 +1,40 @@
+policy_module(dev, 1.0.0)
+
+########################################
+#
+# Development tools domain policy
+# Restricts development applications
+#
+
+gen_require(`
+    type unconfined_t;
+    type user_home_t;
+    type tmp_t;
+    type bin_t;
+    class file { read write create execute unlink };
+    class dir { read search write add_name remove_name };
+    class process { fork signal transition };
+')
+
+# Development domain type
+type dev_t;
+type dev_exec_t;
+domain_type(dev_t)
+application_executable_file(dev_exec_t)
+
+# Domain transition
+domtrans_pattern(unconfined_t, dev_exec_t, dev_t)
+
+# Basic permissions
+allow dev_t self:process { fork signal };
+
+# Development file access
+allow dev_t user_home_t:dir { read search write add_name remove_name };
+allow dev_t user_home_t:file { create read write execute unlink };
+
+# Compiler and build tool access
+allow dev_t bin_t:file { read execute };
+
+# Temporary build files
+allow dev_t tmp_t:dir { read write search add_name remove_name };
+allow dev_t tmp_t:file { create read write execute unlink };

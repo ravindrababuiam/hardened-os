@@ -1,0 +1,8 @@
+{
+  "sbom_version": "1.0",
+  "format": "spdx-json",
+  "generated_at": "2025-08-25T15:38:44Z",
+  "build_id": "unknown",
+  "generator": "hardened-os-sbom-generator",
+  "generator_version": "1.0.0"
+}

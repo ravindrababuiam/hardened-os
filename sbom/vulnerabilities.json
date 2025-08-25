@@ -1,0 +1,17 @@
+{
+  "vulnerability_scan": {
+    "scan_date": "2025-08-25T15:38:44Z",
+    "scanner": "hardened-os-vuln-scanner",
+    "scanner_version": "1.0.0",
+    "findings": []
+  },
+  "security_advisories": {
+    "last_updated": "2025-08-25T15:38:44Z",
+    "sources": [
+      "https://security-tracker.debian.org/",
+      "https://cve.mitre.org/",
+      "https://nvd.nist.gov/"
+    ],
+    "advisories": []
+  }
+}

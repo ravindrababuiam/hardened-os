@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "hardened-laptop-os": {
+      "depends_on": [
+        "linux-hardened",
+        "grub2", 
+        "glibc",
+        "selinux-policy"
+      ]
+    },
+    "linux-hardened": {
+      "depends_on": [
+        "glibc"
+      ]
+    },
+    "grub2": {
+      "depends_on": [
+        "glibc"
+      ]
+    },
+    "selinux-policy": {
+      "depends_on": [
+        "glibc"
+      ]
+    }
+  }
+}

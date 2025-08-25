@@ -1,0 +1,59 @@
+{
+  "components": [
+    {
+      "type": "operating-system",
+      "name": "hardened-laptop-os",
+      "version": "1.0.0",
+      "supplier": "hardened-os-project",
+      "description": "Hardened laptop operating system with GrapheneOS-level security",
+      "licenses": ["GPL-2.0", "GPL-3.0"],
+      "hashes": {
+        "sha256": "placeholder_system_hash"
+      }
+    },
+    {
+      "type": "kernel",
+      "name": "linux-hardened",
+      "version": "6.1.0-hardened",
+      "supplier": "kernel.org",
+      "description": "Hardened Linux kernel with security patches",
+      "licenses": ["GPL-2.0"],
+      "hashes": {
+        "sha256": "placeholder_kernel_hash"
+      }
+    },
+    {
+      "type": "bootloader",
+      "name": "grub2",
+      "version": "2.06-2",
+      "supplier": "gnu.org",
+      "description": "GRUB2 bootloader with Secure Boot support",
+      "licenses": ["GPL-3.0"],
+      "hashes": {
+        "sha256": "placeholder_grub_hash"
+      }
+    },
+    {
+      "type": "library",
+      "name": "glibc",
+      "version": "2.31-13",
+      "supplier": "gnu.org", 
+      "description": "GNU C Library",
+      "licenses": ["LGPL-2.1"],
+      "hashes": {
+        "sha256": "placeholder_glibc_hash"
+      }
+    },
+    {
+      "type": "security-module",
+      "name": "selinux-policy",
+      "version": "3.18.0-8",
+      "supplier": "selinuxproject.org",
+      "description": "SELinux security policy",
+      "licenses": ["GPL-2.0"],
+      "hashes": {
+        "sha256": "placeholder_selinux_hash"
+      }
+    }
+  ]
+}

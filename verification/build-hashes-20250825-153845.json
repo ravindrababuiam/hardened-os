@@ -1,0 +1,12 @@
+{
+  "build_info": {
+    "timestamp": "2025-08-25T15:38:45Z",
+    "build_id": "unknown",
+    "builder": "uma@Ravi"
+  },
+  "artifacts": {
+    "system_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "kernel_hash": "a1b2c3d4e5f6789012345678901234567890123456789012345678901234567890",
+    "initramfs_hash": "b2c3d4e5f6789012345678901234567890123456789012345678901234567890a1"
+  }
+}
