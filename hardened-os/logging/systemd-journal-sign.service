@@ -1,0 +1,22 @@
+[Unit]
+Description=Systemd Journal Cryptographic Signing
+Documentation=man:systemd-journal-remote(8)
+After=systemd-journald.service
+Requires=systemd-journald.service
+
+[Service]
+Type=notify
+ExecStart=/usr/lib/systemd/systemd-journal-remote --split-mode=host --compress=yes --seal=yes
+User=systemd-journal-remote
+Group=systemd-journal-remote
+PrivateTmp=yes
+PrivateDevices=yes
+PrivateNetwork=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/var/log/journal/remote
+StateDirectory=systemd/journal-remote
+RuntimeDirectory=systemd/journal-remote
+
+[Install]
+WantedBy=multi-user.target
