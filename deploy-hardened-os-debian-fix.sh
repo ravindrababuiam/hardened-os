@@ -127,7 +127,7 @@ install_debian_dependencies() {
         rsyslog logrotate \
         nftables iptables-persistent \
         bubblewrap \
-        python3-pip python3-yaml python3-cryptography \
+        python3-full python3-venv \
         curl wget gnupg2 \
         dkms linux-headers-$(uname -r)
     
@@ -190,6 +190,16 @@ install_debian_dependencies() {
         rkhunter chkrootkit \
         aide \
         lynis
+    
+    # Install Python packages using apt instead of pip (Debian externally managed environment)
+    log "Installing Python packages via apt..."
+    apt install -y \
+        python3-yaml \
+        python3-cryptography \
+        python3-requests \
+        python3-jinja2 \
+        python3-setuptools \
+        python3-wheel
     
     success "Debian dependencies installed successfully"
 }
