@@ -221,7 +221,10 @@
 
 ## M5: Production Deployment & Documentation
 
-- [ ] 18. Migrate to production HSM-based signing infrastructure
+- [x] 18. Migrate to production HSM-based signing infrastructure
+
+
+
   - Set up Hardware Security Module (HSM) for production key storage
   - Implement air-gapped signing infrastructure for release builds
   - Create production key rotation and revocation procedures
