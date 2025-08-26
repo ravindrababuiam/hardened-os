@@ -231,7 +231,8 @@
   - Test production signing workflow and key backup/recovery
   - _Requirements: 8.6, 12.2, 12.4_
 
-- [ ] 19. Configure tamper-evident logging and audit system
+- [-] 19. Configure tamper-evident logging and audit system
+
   - Set up systemd-journald with cryptographic signing
   - Implement log forwarding to secure remote storage
   - Configure audit rules for security-relevant events
